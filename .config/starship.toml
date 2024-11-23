@@ -1,0 +1,38 @@
+format = ''' $username@$hostname $python$deno$dart$c $git_branch
+$directory $character
+'''
+right_format = '$sudo$cmd_duration'
+
+[username]
+style_user = 'blue bold'
+format = '[$user]($style)'
+disabled = false
+show_always = true
+
+[hostname]
+ssh_only = false
+style = 'blue bold'
+disabled = false
+format = '[$hostname]($style)'
+
+[character]
+success_symbol = '[](bold blue) '
+error_symbol = '[](bold red) '
+
+[os]
+disabled = false
+
+[python]
+symbol = ' '
+style = 'bold yellow'
+format = '$symbol[$version]($style)'
+
+[sudo]
+symbol = '󰌆 '
+style = 'bold red'
+format = '[$symbol]($style)'
+disabled = false
+
+[git_branch]
+style = 'bold red'
+format = '[$symbol$branch(:$remote_branch)]($style)'

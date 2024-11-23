@@ -1,0 +1,22 @@
+[
+  {
+    "label": "Terminal",
+    "exec": "kitty --class custom-pinfloat",
+    "icon": "/home/wojtmic/Pictures/terminal.svg"
+  },
+  {
+    "label": "Picker",
+    "exec": "/home/wojtmic/.config/scripts/shell/picker.sh",
+    "icon": "/home/wojtmic/Pictures/picker.svg"
+  },
+  {
+    "label": "Killmode",
+    "exec": "hyprctl kill",
+    "icon": "/home/wojtmic/Pictures/killmode.svg"
+  },
+  {
+    "label": "WiFi",
+    "exec": "kitty --class custom-pinfloat -e nmtui",
+    "icon": "/home/wojtmic/Pictures/wifi.svg"
+  }
+]

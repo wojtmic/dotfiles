@@ -1,0 +1,93 @@
+{
+  "layer": "top",
+  "margin-top": -1,
+  "margin-bottom": 0,
+  "margin-left": 0,
+  "margin-right": 0,
+  "modules-left": [
+    "custom/icon",
+    "hyprland/workspaces",
+    "hyprland/window"
+  ],
+  "modules-center": [],
+  "modules-right": [
+    "hyprland/workspaces#scratchpad",
+    "custom/media",
+    "custom/usage",
+    "clock"
+  ],
+  "battery": {
+    "format": "{capacity}% {icon}",
+    "format-icons": [
+      "",
+      "",
+      "",
+      "",
+      ""
+    ],
+    "full-at": 80,
+    "states": {
+      "warning": "70"
+    }
+  },
+  "clock": {
+    "format-alt": "{:%a, %d. %b  %H:%M}"
+  },
+  "custom/icon": {
+    "format": " 󰣇 ",
+    "on-click": "nwg-bar"
+  },
+  "hyprland/workspaces": {
+    "format": "{icon}",
+    "format-icons": {
+      "1": "",
+      "2": "",
+      "3": "",
+      "4": "󰭹",
+      "5": "󰖟",
+      "6": "",
+      "7": "",
+      "8": "",
+      "9": "",
+      "10": "󰭹",
+      "11": "󰖟",
+      "12": ""
+
+    },
+    "all-outputs": false
+    
+  },
+  "hyprland/window": {
+    "max-length": 100000,
+    "icon": true,
+    "icon-size": 16,
+    "format": "> {title}",
+    "tooltip": true,
+    "tooltip-format": "{class}"
+  },
+  "hyprland/workspaces#scratchpad": {
+    "all-outputs": true,
+    "active-only": true,
+    "show-special": true,
+    "disable-scroll": true,
+    "special-visible-only": true,
+    "ignore-workspaces": [
+      "\\d+$"
+    ]
+  },
+  "custom/media": {
+    "exec": "~/.config/waybar/scripts/mediaplayer.py",
+    "format": "{}  ",
+    "restart-interval": 1,
+    "on-click": "playerctl play-pause -i firefox",
+    "on-click-right": "playerctl next -i firefox",
+    "on-click-middle": "playerctl previous -i firefox",
+    "on-scroll-up": "playerctl volume 0.1+ -i firefox",
+    "on-scroll-down": "playerctl volume 0.1- -i firefox"
+  },
+  "custom/usage": {
+    "exec": "~/.config/waybar/scripts/usage.py",
+    "format": "{} ",
+    "restart-interval": 1
+  }
+}
